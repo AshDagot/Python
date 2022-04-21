@@ -1,0 +1,6 @@
+a = int(input("введите число: "))
+n1 = int("%s" % a)
+n2 = int("%s%s" % (a, a))
+n3 = int("%s%s%s" % (a, a, a))
+n4 = n1 + n2 + n3
+print(f'{n1}+{n2}+{n3}={n4}')
