@@ -1,0 +1,12 @@
+pl = int(input('Введите значение прибыли: '))
+cost = int(input('Введите значение издержек: '))
+people = int(input('Ввдите количество работников: '))
+if pl > cost:
+    print('Выручка больше издержек')
+    clear_pl = pl - cost
+    rent = clear_pl / pl
+    print('Рентабельность {} выручки {}: {:.2f}'.format('нашей', 'составила', rent))
+    clear_for_person = float(clear_pl / people)
+    print('Прибыль фирмы в расчете на одного сотрудника: %s' % clear_for_person)
+else:
+    print('Фирма работает в убыток')
