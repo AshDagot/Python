@@ -1,0 +1,15 @@
+sec = int(input('Введите количество секунд: '))
+hours = sec // 3600
+minutes = (sec % 3600) // 60
+seconds = (sec % 3600) % 60
+minutes_res = (minutes) if minutes > 10 else ('0' + str(minutes))
+seconds_res = (seconds) if seconds > 10 else ('0' + str(seconds))
+hours_res = (hours) if hours > 10 else ('0' + str(hours))
+while hours > 24:
+    print('в сутках всего 24 часа')
+    sec = int(input('Введите количество секунд: '))
+    hours = sec // 3600
+    minutes = (sec % 3600) // 60
+    seconds = (sec % 3600) % 60
+
+print(f'Московское время: {hours_res}:{minutes_res}:{seconds_res}')
