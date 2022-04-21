@@ -14,5 +14,7 @@ while hours > 24:
     hours = sec // 3600
     minutes = (sec % 3600) // 60
     seconds = (sec % 3600) % 60
-
+    minutes_res = (minutes) if minutes > 10 else ('0' + str(minutes))
+    seconds_res = (seconds) if seconds > 10 else ('0' + str(seconds))
+    hours_res = (hours) if hours > 10 else ('0' + str(hours))
 print(f'Московское время: {hours_res}:{minutes_res}:{seconds_res}')
