@@ -1,0 +1,32 @@
+goods = []
+analytics = {'Наименование': [],
+             'Цена': [],
+             'Количество': [],
+             'ед. изм.': []}
+num = 1
+while True:
+    name = input('Введите название товара: ')
+    price = int(input('Введите цену товара: '))
+    quantity = int(input('Введите количество товара: '))
+    unit = input('Введите единицу измерения товара: ')
+    params = {
+        'Наименование': name,
+        'Цена': price,
+        'Количество': quantity,
+        'ед. изм.': unit
+    }
+    good = (num, params)
+    goods.append(good)
+
+    for key, value in params.items():
+        i = analytics.get(key)
+        if value in i:
+            continue
+        i.append(value)
+        continue
+
+    num += 1
+    end = input('Ввести еще позицию? ').lower()
+    if end == 'нет':
+        break
+print(analytics)
